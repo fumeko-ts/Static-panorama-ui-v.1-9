@@ -1,0 +1,9 @@
+{
+  "namespace": "RPC_BGCOMP",
+   "UI1": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/ui/BACKGROUND/MENU_BG",
+    "uv_size": [ "100%c", "100%" ]
+  }
+}
