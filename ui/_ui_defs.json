@@ -1,0 +1,6 @@
+{ 
+  "ui_defs": [
+   "ui/MENU/comps/RPC_BGCOMP.uicomponent",
+   "ui/MENU/data/RPC_BGDATA.uidata"
+  ]
+}
