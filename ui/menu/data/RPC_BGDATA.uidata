@@ -1,0 +1,15 @@
+{
+  "namespace": "RPC_BGDATA",
+   "UI2": {
+   "type": "image",
+   "anchor_from": "center",
+   "anchor_to": "center",
+   "size": [ "100%", "100%" ],
+   "uv": "",
+     "controls": [
+      {
+        "MENU_BG@RPC_BGCOMP.UI1": {
+       }
+     }
+   ]
+ }
