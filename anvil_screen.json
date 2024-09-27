@@ -1,3 +1,8 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
 {
   "namespace": "anvil",
 
@@ -205,6 +210,7 @@
 
   "anvil_item_slot": {
     "type": "panel",
+    "size": [ 18,18 ],
     "controls": [
       {
         "container_item@common.container_item": {
@@ -217,7 +223,7 @@
 
   "recipe_grid": {
     "type": "grid",
-    "size": [ "83.5%", "90%" ],
+    "size": [ "83%", "40%" ],
     "anchor_from": "center",
     "anchor_to": "center",
     "grid_dimensions": [ 5, 1 ],
@@ -237,7 +243,7 @@
       {
         "plus": {
           "type": "panel",
-          "grid_position": [ 1, 2 ],
+          "grid_position": [ 1, 0 ],
           "controls": [
             { "plus_sign_icon@anvil.plus_sign_icon": {} }
           ]
@@ -245,7 +251,7 @@
       },
       {
         "material_item_slot@anvil.anvil_item_slot": {
-          "grid_position": [ 2, 2 ],
+          "grid_position": [ 2, 0 ],
           "$item_collection_name": "anvil_material_items",
 
           "$focus_id_binding_type": "none",
@@ -261,7 +267,7 @@
       {
         "yields": {
           "type": "panel",
-          "grid_position": [ 3, 2 ],
+          "grid_position": [ 3, 0 ],
           "controls": [
             { "arrow_icon@anvil.arrow_icon": {} },
             {
@@ -370,11 +376,6 @@
     "type": "panel",
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      {
-        "flying_item_renderer@common.flying_item_renderer": {
-          "layer": 8
-        }
-      },
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
       { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
       {
@@ -398,7 +399,10 @@
             { "gamepad_cursor@common.gamepad_cursor_button": {} }
           ]
         }
-      }
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 12 } },
+      { "bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {} },
+      { "bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {} }
     ]
   },
   "anvil_screen@common.inventory_screen_common": {
@@ -408,13 +412,14 @@
       {
         "requires": "$desktop_screen",
         "$screen_content": "anvil.anvil_panel",
-        "$screen_animations": [],
-        "$screen_bg_content": "ACHEST.UI12",
+        "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.4
       },
       {
         "requires": "$pocket_screen",
-        "$screen_content": "anvil_pocket.anvil_panel"
+        "$screen_content": "anvil_pocket.anvil_panel",
+        "$screen_bg_content": "common.screen_background",
+        "$screen_background_alpha": 0.4
       }
     ]
   }
